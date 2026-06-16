@@ -25,7 +25,7 @@ class ActorSerializer(
 ):
     full_name = serializers.SerializerMethodField()
 
-    def get_full_name(self, obj):
+    def get_full_name(self, obj: Actor) -> str:
         return obj.__str__()
 
     class Meta:
@@ -86,14 +86,14 @@ class MovieListSerializer(
         read_only=True
     )
 
-    def get_genres(self, obj):
+    def get_genres(self, obj: Movie) -> list[str]:
         return [
             genre.name
             for genre
             in obj.genres.all()
         ]
 
-    def get_actors(self, obj):
+    def get_actors(self, obj: Movie) -> list[str]:
         return [
             actor.__str__()
             for actor
