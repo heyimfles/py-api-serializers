@@ -140,7 +140,7 @@ class MovieSessionSerializer(
             "show_time",
             "movie",
             "cinema_hall",
-    ]
+        ]
 
 
 class MovieSessionRetrieveSerializer(
