@@ -6,3 +6,6 @@
 venv/
 .pytest_cache/
 **__pycache__/
+db.sqlite3
+3.15
+5.1
