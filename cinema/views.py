@@ -102,5 +102,4 @@ class MovieSessionViewSet(
         if self.action == "retrieve":
             return MovieSessionRetrieveSerializer
 
-
         return MovieSessionSerializer
